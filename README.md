@@ -11,6 +11,7 @@ Filtros, búsqueda y paginación en los endpoints principales.
 Documentación interactiva de la API con Swagger.
 
 **Tecnologías utilizadas**
+
 Python
 Django
 Django REST Framework
@@ -18,7 +19,9 @@ PostgreSQL
 Simple JWT
 drf-yasg (Swagger/OpenAPI)
 django-filter
+
 **Instalación**
+
 Clonar el repositorio:
 ```bash
 git clone <https://github.com/marjammam/gestion-cursos.git>
@@ -42,6 +45,7 @@ Instalar dependencias:
 pip install -r requirements.txt
 ```
 **Configuración de base de datos**
+
 El proyecto utiliza PostgreSQL. Antes de ejecutar el proyecto:
 Crea una base de datos en PostgreSQL (por ejemplo, con pgAdmin):
 ```sql
@@ -72,7 +76,9 @@ Creación del superusuario
 ```bash
 python manage.py createsuperuser
 ```
+
 **Ejecución***
+
 ```bash
 python manage.py runserver
 ```
@@ -99,8 +105,10 @@ Los endpoints protegidos requieren el header:
 ```
 Authorization: Bearer <access_token>
 ```
+
 **Tipos de usuario y permisos**
 **Rol	Permisos**
+
 Administrador	Gestiona docentes, estudiantes, cursos e inscripciones (CRUD completo)
 Docente	Consulta sus cursos asignados y los estudiantes inscritos en ellos
 Estudiante	Consulta sus cursos inscritos y su información personal
@@ -123,7 +131,9 @@ Filtros y búsqueda
 `GET /api/cursos/?search=texto` — búsqueda por nombre o código de curso
 `GET /api/inscripciones/?estudiante={id}` — inscripciones de un estudiante específico
 `GET /api/estudiantes/?search=texto` — búsqueda por nombre de estudiante
+
 **Paginación**
+
 Los endpoints principales devuelven resultados paginados (10 por página por defecto).
 Optimización de consultas
 Se utiliza `select_related()` en los querysets de Docente, Estudiante, Curso e Inscripción para optimizar las consultas relacionadas y evitar el problema N+1.
