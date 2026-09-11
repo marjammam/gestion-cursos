@@ -1,6 +1,7 @@
 **Sistema de Gestión de Cursos** 
 
 **Descripción**
+
 Aplicación backend desarrollada con Django y Django REST Framework para la gestión de cursos, docentes, estudiantes e inscripciones. El sistema maneja tres tipos de usuario (Administrador, Docente, Estudiante), cada uno con permisos diferenciados, y utiliza autenticación mediante JWT.
 Funcionalidades principales:
 Gestión de usuarios, docentes y estudiantes.
@@ -8,6 +9,7 @@ CRUD de cursos e inscripciones.
 Permisos por rol de usuario.
 Filtros, búsqueda y paginación en los endpoints principales.
 Documentación interactiva de la API con Swagger.
+
 **Tecnologías utilizadas**
 Python
 Django
